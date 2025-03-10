@@ -11,7 +11,10 @@
 <body class="page-body">
   <header class="page-header" data-test="hero">
     <a class="page-header__link" href="#">
-      <span>Лого</span>
+      <svg width="100" height="20">
+        <use href="/__spritemap#logo"></use>
+        <span class="visually-hidden">Логотип SUPERGYM</span>
+      </svg>
     </a>
     <a class="page-header__link" href="tel:+78005555555">8 800 555-55-55</a>
     <div class="promo-container">
@@ -25,7 +28,15 @@
         <h1 class="content-box__title">Фитнес центр</h1>
         <button class="content-box__button" type="button">Купить абонемент</button>
       </div>
-      <img class="promo-container__img" src="#" width="10" height="10" alt="">
+      <picture>
+        <source type="image/webp" media="(min-width: 1366px)" width="500" height="524" srcset="img/hero-img-desktop@1x.webp 1x, img/hero-img-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" width="324" height="390" srcset="img/hero-img-tablet@1x.webp 1x, img/hero-img-tablet@2x.webp 2x">
+        <source type="image/webp" width="320" height="420" srcset="img/hero-img-mobile@1x.webp 1x, img/hero-img-mobile@2x.webp 2x">
+
+        <source media="(min-width: 1366px)" width="500" height="524" type="image/png" srcset="img/hero-img-desktop@1x.png 1x, img/hero-img-desktop@1x.png 2x">
+        <source media="(min-width: 768px)" width="324" height="390" type="image/png" srcset="img/hero-img-tablet@1x.png 1x, img/hero-img-tablet@1x.png 2x">
+        <img class="promo-container__img" src="img/hero-img-mobile@1x.png" srcset="img/hero-img-mobile@2x.png 2x" width="320" height="420" alt="Спортивный мужчина в синей футболке смотрит вдаль">
+      </picture>
     </div>
   </header>
   <main>
@@ -35,7 +46,15 @@
         <p class="about-content__text">Просторный зал площадью 900 кв/м</p>
         <p class="about-content__description">Supergym - самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
       </div>
-      <img class="about__img" src="#" width="10" height="10" alt="">
+      <picture>
+        <source type="image/webp" media="(min-width: 1366px)" width="660" height="400" srcset="img/about-img-desktop@1x.webp 1x, img/about-img-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" width="678" height="345" srcset="img/about-img-tablet@1x.webp 1x, img/about-img-tablet@2x.webp 2x">
+        <source type="image/webp" width="320" height="280" srcset="img/about-img-mobile@1x.webp 1x, img/about-img-mobile@2x.webp 2x">
+
+        <source media="(min-width: 1366px)" width="660" height="400" type="image/png" srcset="img/about-img-desktop@1x.png 1x, img/about-img-desktop@1x.png 2x">
+        <source media="(min-width: 768px)" width="678" height="345" type="image/png" srcset="img/about-img-tablet@1x.png 1x, img/about-img-tablet@1x.png 2x">
+        <img class="promo-container__img" src="img/about-img-mobile@1x.png" srcset="img/about-img-mobile@2x.png 2x" width="320" height="280" alt="Тренажерный зал со светлым интерьером">
+      </picture>
       <video class="about__video"></video>
     </section>
     <section class="price" data-test="price">
@@ -80,7 +99,15 @@
         <p class="games__container-description">Ежегодные соревнования по CrossFit</p>
         <a class="games__container-link" href="#">заполнить заявку</a>
       </div>
-      <img class="games__img" src="#" width="10" height="10" alt="">
+      <picture>
+        <source type="image/webp" media="(min-width: 1366px)" width="660" height="500" srcset="img/games-img-desktop@1x.webp 1x, img/games-img-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" width="378" height="348" srcset="img/games-img-tablet@1x.webp 1x, img/games-img-tablet@2x.webp 2x">
+        <source type="image/webp" width="290" height="290" srcset="img/games-img-mobile@1x.webp 1x, img/games-img-mobile@2x.webp 2x">
+
+        <source media="(min-width: 1366px)" width="660" height="500" type="image/png" srcset="img/games-img-desktop@1x.png 1x, img/games-img-desktop@1x.png 2x">
+        <source media="(min-width: 768px)" width="378" height="348" type="image/png" srcset="img/games-img-tablet@1x.png 1x, img/games-img-tablet@1x.png 2x">
+        <img class="promo-container__img" src="img/games-img-mobile@1x.png" srcset="img/games-img-mobile@2x.png 2x" width="290" height="290" alt="Спортсмен, бьющий рукой об пол, вокруг него облако пыли от магнезии">
+      </picture>
     </section>
     <section class="juri" data-test="juri">
       <h2 class="juri__title">Жюри</h2>
@@ -91,42 +118,74 @@
         <ul class="juri-slider__previews">
           <li class="juri-slider__item">
             <a class="juri-slider__link" href="#">
-              <img src="#" width="10" height="10" alt="Анна Павлова">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/anna-pavlova-photo@1x.webp 1x, img/anna-pavlova-photo@2x.webp 2x">
+
+                <img class="promo-container__img" src="img/anna-pavlova-photo@1x.png" srcset="img/anna-pavlova-photo@2x.png 2x" width="260" height="300" alt="Анна Павлова">
+              </picture>
             </a>
           </li>
           <li class="juri-slider__item">
             <a class="juri-slider__link" href="#">
-              <img src="#" width="10" height="10" alt="Алексей Лавров">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/alex-lavrov-photo@1x.webp 1x, img/alex-lavrov-photo@2x.webp 2x">
+
+                <img class="promo-container__img" src="img/alex-lavrov-photo@1x.png" srcset="img/alex-lavrov-photo@2x.png 2x" width="260" height="300" alt="Алексей Лавров">
+              </picture>
             </a>
           </li>
           <li class="juri-slider__item">
             <a class="juri-slider__link" href="#">
-              <img src="#" width="10" height="10" alt="Александр Пашков">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/alexander-pashkov-photo@1x.webp 1x, img/alexander-pashkov-photo@2x.webp 2x">
+
+                <img class="promo-container__img" src="img/alexander-pashkov-photo@1x.png" srcset="img/alexander-pashkov-photo@2x.png 2x" width="260" height="300" alt="Александр Пашков">
+              </picture>
             </a>
           </li>
           <li class="juri-slider__item">
             <a class="juri-slider__link" href="#">
-              <img src="#" width="10" height="10" alt="Мария Кетова">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/maria-ketova-photo@1x.webp 1x, img/maria-ketova-photo@2x.webp 2x">
+
+                <img class="promo-container__img" src="img/maria-ketova-photo@1x.png" srcset="img/maria-ketova-photo@2x.png 2x" width="260" height="300" alt="Мария Кетова">
+              </picture>
             </a>
           </li>
           <li class="juri-slider__item">
             <a class="juri-slider__link" href="#">
-              <img src="#" width="10" height="10" alt="Анна Павлова">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/anna-pavlova-photo@1x.webp 1x, img/anna-pavlova-photo@2x.webp 2x">
+
+                <img class="promo-container__img" src="img/anna-pavlova-photo@1x.png" srcset="img/anna-pavlova-photo@2x.png 2x" width="260" height="300" alt="Анна Павлова">
+              </picture>
             </a>
           </li>
           <li class="juri-slider__item">
             <a class="juri-slider__link" href="#">
-              <img src="#" width="10" height="10" alt="Алексей Лавров">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/alex-lavrov-photo@1x.webp 1x, img/alex-lavrov-photo@2x.webp 2x">
+
+                <img class="promo-container__img" src="img/alex-lavrov-photo@1x.png" srcset="img/alex-lavrov-photo@2x.png 2x" width="260" height="300" alt="Алексей Лавров">
+              </picture>
             </a>
           </li>
           <li class="juri-slider__item">
             <a class="juri-slider__link" href="#">
-              <img src="#" width="10" height="10" alt="Александр Пашков">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/alexander-pashkov-photo@1x.webp 1x, img/alexander-pashkov-photo@2x.webp 2x">
+
+                <img class="promo-container__img" src="img/alexander-pashkov-photo@1x.png" srcset="img/alexander-pashkov-photo@2x.png 2x" width="260" height="300" alt="Александр Пашков">
+              </picture>
             </a>
           </li>
           <li class="juri-slider__item">
             <a class="juri-slider__link" href="#">
-              <img src="#" width="10" height="10" alt="Мария Кетова">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/maria-ketova-photo@1x.webp 1x, img/maria-ketova-photo@2x.webp 2x">
+
+                <img class="promo-container__img" src="img/maria-ketova-photo@1x.png" srcset="img/maria-ketova-photo@2x.png 2x" width="260" height="300" alt="Мария Кетова">
+              </picture>
             </a>
           </li>
         </ul>
@@ -188,7 +247,15 @@
           <p class="offers-container__description">Безлимитный абонемент в тренажёрный зал</p>
           <a class="offers-container__link" href="#">подробнее</a>
         </div>
-        <img class="offers-container__img" src="#" width="10" height="10" alt="Девушка в синем спортивном комплекте на фоне голубого неба">
+        <picture>
+          <source type="image/webp" media="(min-width: 1366px)" width="280" height="460" srcset="img/offers-img-desktop@1x.webp 1x, img/offers-img-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" width="400" height="462" srcset="img/offers-img-tablet@1x.webp 1x, img/offers-img-tablet@2x.webp 2x">
+          <source type="image/webp" width="320" height="360" srcset="img/offers-img-mobile@1x.webp 1x, img/offers-img-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1366px)" width="280" height="460" type="image/png" srcset="img/offers-img-desktop@1x.png 1x, img/offers-img-desktop@1x.png 2x">
+          <source media="(min-width: 768px)" width="400" height="462" type="image/png" srcset="img/offers-img-tablet@1x.png 1x, img/offers-img-tablet@1x.png 2x">
+          <img class="promo-container__img" src="img/offers-img-mobile@1x.png" srcset="img/offers-img-mobile@2x.png 2x" width="320" height="360" alt="Девушка в синем спортивном комплекте на фоне голубого неба">
+        </picture>
       </div>
       <ul class="offers__cards offers-cards">
         <li class="offers-cards__item">
@@ -343,7 +410,13 @@
         <ul class="reviews-slider__list authors-list">
           <li class="authors-list__item">
             <a class="authors-list__link" href="#">
-              <img src="#" width="10" height="10" alt="Фото Анны Орловой">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" width="80" height="80" srcset="img/anna-orlova-avatar@1x.webp 1x, img/anna-orlova-avatar@2x.webp 2x">
+                <source type="image/webp" width="68" height="68" srcset="img/anna-orlova-avatar@1x.webp 1x, img/anna-orlova-avatar@2x.webp 2x">
+
+                <source media="(min-width: 768px)" width="80" height="80" type="image/png" srcset="img/anna-orlova-avatar@1x.png 1x, img/anna-orlova-avatar@1x.png 2x">
+                <img class="promo-container__img" src="img/anna-orlova-avatar@1x.png" srcset="img/anna-orlova-avatar@2x.png 2x" width="68" height="68" alt="Анна Орлова">
+              </picture>
             </a>
             <div class="authors-list__content reviews-content">
               <p class="reviews-content__name">Анна Орлова</p>
@@ -352,7 +425,13 @@
           </li>
           <li class="authors-list__item">
             <a href="#">
-              <img src="#" width="10" height="10" alt="Фото Анны Орловой">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" width="80" height="80" srcset="img/anna-orlova-avatar@1x.webp 1x, img/anna-orlova-avatar@2x.webp 2x">
+                <source type="image/webp" width="68" height="68" srcset="img/anna-orlova-avatar@1x.webp 1x, img/anna-orlova-avatar@2x.webp 2x">
+
+                <source media="(min-width: 768px)" width="80" height="80" type="image/png" srcset="img/anna-orlova-avatar@1x.png 1x, img/anna-orlova-avatar@1x.png 2x">
+                <img class="promo-container__img" src="img/anna-orlova-avatar@1x.png" srcset="img/anna-orlova-avatar@2x.png 2x" width="68" height="68" alt="Анна Орлова">
+              </picture>
             </a>
             <div class="authors-list__content reviews-content">
               <p class="reviews-content__name">Анна Орлова</p>
@@ -361,7 +440,13 @@
           </li>
           <li class="authors-list__item">
             <a href="#">
-              <img src="#" width="10" height="10" alt="Фото Анны Орловой">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" width="80" height="80" srcset="img/anna-orlova-avatar@1x.webp 1x, img/anna-orlova-avatar@2x.webp 2x">
+                <source type="image/webp" width="68" height="68" srcset="img/anna-orlova-avatar@1x.webp 1x, img/anna-orlova-avatar@2x.webp 2x">
+
+                <source media="(min-width: 768px)" width="80" height="80" type="image/png" srcset="img/anna-orlova-avatar@1x.png 1x, img/anna-orlova-avatar@1x.png 2x">
+                <img class="promo-container__img" src="img/anna-orlova-avatar@1x.png" srcset="img/anna-orlova-avatar@2x.png 2x" width="68" height="68" alt="Анна Орлова">
+              </picture>
             </a>
             <div class="authors-list__content reviews-content">
               <p class="reviews-content__name">Анна Орлова</p>
@@ -411,7 +496,10 @@
     </section>
   </main>
   <footer class="footer" data-test="footer">
-    <!-- <svg></svg>  -->
+    <svg width="100" height="20">
+      <use href="/__spritemap#logo"></use>
+      <span class="visually-hidden">Логотип SUPERGYM</span>
+    </svg>
     <nav class="footer__navigation navigation">
       <ul class="navigation__list">
         <li class="navigation__item">
@@ -443,7 +531,7 @@
         </li>
         <li class="socials__item">
           <a class="socials__link" href="#">
-            <span>Дискорд</span>
+            <span>Reddit</span>
           </a>
         </li>
       </ul>
